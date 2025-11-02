@@ -4,4 +4,52 @@
       <option name="PHP" value="true" />
     </context>
   </template>
+  <template name="dbl" value="\Illuminate\Support\Facades\DB::beforeExecuting(function ($query, $bindings) {&#10;    $conn = \Illuminate\Support\Facades\DB::connection();&#10;    $query = $conn-&gt;query()-&gt;getGrammar()-&gt;substituteBindingsIntoRawSql(&#10;        $query, $conn-&gt;prepareBindings($bindings));&#10;    if (!str_contains($query, '`telescope`') &amp;&amp; str_contains($query, '$END$')) {&#10;        isset($x);&#10;    }&#10;});" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="dbs" value="\DB::select(&lt;&lt;&lt;SQL&#10;    $END$&#10;SQL)" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="gx" value="$GLOBALS['x'] = true;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="igx" value="if ($GLOBALS['x'] ?? false) {&#10;    $BODY$&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="BODY" expression="" defaultValue="&quot;isset($x);&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="rep" value="use \Tests\Helpers\PhpUnit\CanRepeat;&#10;private static int $repeatTimesOverride = 1000;&#10;&#10;/**&#10; * @test&#10; * @dataProvider provideRepeating&#10; */" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="test" value="#[Test]&#10;public function $END$(): void&#10;{&#10;    &#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="vd" value="var_dump($END$);&#10;die;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="xb" value="$COND$xdebug_break();" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="COND" expression="" defaultValue="&quot;if () &quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="xbu" value="if (preg_match('#$COND$#', $_SERVER['REQUEST_URI'])) {&#10;    \xdebug_break();&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="COND" expression="" defaultValue="&quot;true&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
 </templateSet>
