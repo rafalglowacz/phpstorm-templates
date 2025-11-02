@@ -1,0 +1,7 @@
+<templateSet group="PHP">
+  <template name="inf" value="info(&quot;[rafal-tmp] $END$&quot;);" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+</templateSet>

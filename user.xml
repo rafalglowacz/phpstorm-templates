@@ -5,11 +5,6 @@
       <option name="TypeScript" value="true" />
     </context>
   </template>
-  <template name="inf" value="info(&quot;[rafal-tmp] $END$&quot;);" description="" toReformat="false" toShortenFQNames="true">
-    <context>
-      <option name="PHP" value="true" />
-    </context>
-  </template>
   <template name="gx" value="$GLOBALS['x'] = true;" description="" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="PHP" value="true" />
@@ -70,7 +65,7 @@
       <option name="PHP" value="true" />
     </context>
   </template>
-  <template name="dbs" value="\DB::select(&lt;&lt;&lt;SQL&#10;    $END$&#10;SQL)" toReformat="false" toShortenFQNames="true">
+  <template name="dbs" value="\DB::select(&lt;&lt;&lt;SQL&#10;    $END$&#10;SQL)" description="" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="PHP" value="true" />
     </context>
